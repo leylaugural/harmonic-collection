@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Gowun+Batang:wght@400;700&family=Unlock&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Amita:wght@400;700&family=Yatra+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Yatra+One&display=swap');
+@import url("https://use.typekit.net/ufd8kuu.css");
 
 .bree-serif-regular {
   font-family: "Bree Serif", serif;
@@ -10,15 +11,15 @@
 
 body{
   font-family: Arial, Helvetica, sans-serif;
-  background-color: #c2decb;
+  background-color: #4c1609;
   margin: 0%;
 }
 
 h1{
   color: #821313;
-  font-size: 2.5em;
+  font-size: 100px;
   margin-bottom: 50px;
-  font-family: Yatra One;
+  font-family: "baucher-gothic-urw", sans-serif;
   text-align: center;
   
 }
@@ -41,7 +42,7 @@ h2{
 }
 
 .symbol-icon {
-  cursor: pointer;x\
+  cursor: pointer;
   width: 150px;
   text-align: center;
 }
