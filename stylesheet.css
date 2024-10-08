@@ -5,7 +5,8 @@ body{
     background: #4c1609;
     margin: 0;
     padding: 0;
-    display: flexbox;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -53,3 +54,10 @@ h2{
 .explore-button:active {
     transform: scale(0.95);
 }
+.senses {
+    text-align: center;
+    color: #ead4ad;
+    padding: 20px;
+    background-image: ;
+}
+
