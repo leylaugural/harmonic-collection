@@ -14,12 +14,9 @@ body {
     position: relative;
     overflow: hidden;
     height: 100vh;
-    border-width: 20px;
-    border-style: solid;
-    border-image: url('Artboard\ 1.png') 30;
 }
 
-h1 {
+h1 { 
     font-size: 100px;;
     color: #1333ba;
     font-family: "baucher-gothic-urw", sans-serif;

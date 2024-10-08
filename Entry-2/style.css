@@ -11,16 +11,16 @@
 
 body{
   font-family: Arial, Helvetica, sans-serif;
-  background-color: #4c1609;
+  background-color: #ead4ad;
   margin: 0%;
 }
 
 h1{
-  color: #821313;
+  color: #4c1609;
   font-size: 100px;
-  margin-bottom: 50px;
   font-family: "baucher-gothic-urw", sans-serif;
   text-align: center;
+  margin-top: 0%;
   
 }
 

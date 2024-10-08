@@ -1,0 +1,55 @@
+@import url("https://use.typekit.net/ufd8kuu.css");
+@import url("https://use.typekit.net/gqn6jle.css");
+@import url("https://use.typekit.net/pfh6bqf.css");
+body{
+    background: #4c1609;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+.container {
+    text-align: center;
+    color: #ead4ad;
+    padding: 20px;
+}
+h1{
+    color: #ead4ad;
+    margin: 0;
+    font-weight: 700;
+    font-family: "baucher-gothic-urw", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 150px;
+    letter-spacing: 2px;
+} 
+h2{
+    font-family: "ltc-bodoni-175", serif;
+    font-weight: 400;
+    font-style: normal;
+    padding:0px;
+}
+.explore-button {
+    background-color: #1333ba;
+    color: #ead4ad;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    cursor: pointer;
+    font-family: "proxima-nova", sans-serif;
+    transition: background-color 0.3s, transform 0.3s;
+    border-radius: 5px;
+}
+
+.explore-button:hover {
+    background-color: #ead4ad;
+    color: #4c1609;
+    transform: scale(1.05);
+}
+
+.explore-button:active {
+    transform: scale(0.95);
+}
