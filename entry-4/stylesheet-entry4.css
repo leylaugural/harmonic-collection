@@ -1,0 +1,133 @@
+@import url("https://use.typekit.net/vnm2ync.css"); 
+@import url("https://use.typekit.net/ufd8kuu.css");
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #4c1609;
+    overflow-x: hidden;
+    justify-content: center;
+    height: 100vh;
+}
+
+header {
+    position: fixed; 
+    top: 0;
+    left:0;
+    width: 100%;
+    height: 100px;
+    color: #ead4ad;
+    z-index: 10;
+    overflow: hidden;
+} 
+
+.scrolling-sentence {
+    padding: 0%;
+    width: 100%;
+    white-space: nowrap; 
+    animation: scroll 18s linear infinite; 
+}
+
+.scrolling-sentence h1 {
+    font-family: "parfumerie-script", cursive, sans-serif; 
+    font-weight: 400;
+    font-size: 80px;
+    font-style: normal;
+    letter-spacing: 5px;
+    margin: 0%; 
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(100%); 
+    }
+    100% {
+        transform: translateX(-150%); 
+    }
+}
+h1 {
+    font-size: 48px;
+    color: #ead4ad;
+    margin-bottom: 20px;
+}
+
+.photo-album {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    margin: 0 auto;
+}
+
+.photo {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 10px solid #eeeeee;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.6s ease, z-index 0.6s ease;
+}
+
+#photo-1 {
+    transform: rotate(-5deg);
+    z-index: 1;
+}
+
+#photo-2 {
+    transform: rotate(5deg);
+    z-index: 2;
+}
+
+#photo-3 {
+    transform: rotate(-10deg);
+    z-index: 3;
+}
+
+#photo-4 {
+    transform: rotate(-10deg);
+    z-index: 4;
+}
+#photo-5 {
+    transform: rotate(15deg);
+    z-index: 5;
+}
+#photo-6 {
+    transform: rotate(0deg);
+    z-index: 6;
+}
+
+.photo-album:hover .photo {
+    transform: none;
+}
+
+.photo-album:hover #photo-1 {
+    transform: translateX(-350px); 
+}
+
+.photo-album:hover #photo-2 {
+    transform: translateX(0); 
+}
+
+.photo-album:hover #photo-3 {
+    transform: translateX(350px); 
+}
+
+.photo-album:hover #photo-4 {
+    transform: translateX(350px) translateY(450px); 
+}
+
+.photo-album:hover #photo-5 {
+    transform: translateX(0px) translateY(450px); 
+}
+
+.photo-album:hover #photo-6 {
+    transform: translateX(-350px) translateY(450px); 
+}
+
+.photo img {
+    width: 100%;
+    height: 100%;
+}
+
+

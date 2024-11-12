@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Gowun+Batang:wght@400;700&family=Unlock&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amita:wght@400;700&family=Yatra+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yatra+One&display=swap');
+@import url("https://use.typekit.net/ufd8kuu.css");
+@import url("https://use.typekit.net/slq2pxe.css");
+
+.bree-serif-regular {
+  font-family: "Bree Serif", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body{
+  font-family: "hwt-arabesque", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-image: url(garden.png);
+  background-size: cover;    
+  background-repeat: no-repeat;
+  margin: 0%;
+  background-color: rgba(68, 22, 10, 0.8);
+  background-blend-mode:overlay;
+}
+
+h1{
+  color: #4c1609;
+  font-size: 100px;
+  font-family: "hwt-arabesque", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  margin-top: 0%;
+  
+}
+
+h2{
+  color: #fdffcb;
+  font-size: 1.2em;
+  font-family: Yatra One;
+  margin: 50px auto;
+  text-align: center;
+}
+
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 50px;
+  margin-top: 30px;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.symbol-icon {
+  position: relative;
+  cursor: pointer;
+  text-align: center;
+  transform: rotate(-5deg);
+  transition: transform 0.3s ease;
+}
+
+.symbol-icon:hover {
+  transform: rotate(0deg) scale(1.1);
+}
+
+.symbol-icon img{
+  width: 100px;
+  height: 100px;
+}
+
+.symbol-icon p{
+  text-align: center;
+  font-weight: bold;
+  margin-top: 10px;
+  color: #821313;
+}
+
+.meanings {
+  margin-top: 30px;
+}
+
+.symbol-meaning {
+  display: none ;
+  margin-top: 20px;
+  margin-left: 100px;
+  margin-right: 100px;
+  background-color: #4c1609;
+  border: 1px solid #d3b08f;
+  border-radius: 50px;
+  font-size: 20px; 
+  color: #fdffcb;
+  font-family: Amita;
+  padding: 5%;
+  align-items: center;
+}
+
+:target { 
+display: block;
+animation:fadeIn 0.5s ease-in-out;
+} 

@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Yatra+One&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Yatra One', cursive;
+  background-color: #f0f8ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+  transition: background-color 0.5s ease;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.center-image {
+  width: 700px;
+  height: 700px;
+  background-image: url('coffee-grounds-before.png');
+  background-size: cover;
+  background-position: center;
+  transition: background-image 0.5s ease; 
+}
+
+.container:hover .center-image {
+  background-image: url('coffee-grounds-after.png');
+}
+
+
+.symbol {
+  position: absolute;
+  font-size: 2rem;
+  color: #f0f8ff;;
+}
+
+
+.symbol1 {
+  top: 10%;
+  left: 20%;
+}
+
+.symbol2 {
+  top: 30%;
+  right: 15%;
+}
+.symbol2 img{
+    height: 170px;
+    width:auto;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.symbol3 {
+  bottom: 20%;
+  left: 10%;
+}
+
+.symbol3 img{
+    height: 170px;
+    width: auto;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.symbol4 {
+  bottom: 10%;
+  right: 7%;
+  font-size: medium;
+  color: black;
+}
+
+
+.ring {
+    bottom: 40%;
+    right:15%;
+}
+
+.container:hover ~ .symbol2 img {
+    opacity: 1; }
+
+.container:hover ~ .symbol3 img {
+  opacity: 1; }
+
+body:hover {
+  background-color: rgb(0, 0, 0);
+} 
