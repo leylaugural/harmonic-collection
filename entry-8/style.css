@@ -1,11 +1,11 @@
-* {
+body {
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body, html {
-    height: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #f7f1e3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
     overflow: hidden;
   }
 
@@ -55,48 +55,62 @@
     transform: scale(0.98) rotate(0deg);
   }
   
-  .background {
+  .coffee-table {
     position: relative;
-    width: 100vw;
-    height: 100vh;
-    background: url('entry-7-bg.png') no-repeat center center/cover;
+    width: 600px;
+    height: 400px;
+    background-color: #8b5a2b;
+    border: 10px solid #5d3e1d;
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
   }
   
-  .eyes {
-    position: relative;
-    display: flex;
-    gap: 50px; 
+  .coffee-table h1 {
+    font-size: 24px;
+    color: white;
+    margin-bottom: 20px;
   }
   
-  .eye {
-    width: 50px;
-    height: 50px;
-    background-color: white;
-    border-radius: 50%;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  .backgammon-board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    width: 90%;
+    height: 50%;
   }
   
-  .eye::before {
-    content: '';
-    width: 20px;
-    height: 20px;
-    background-color: black;
-    border-radius: 50%;
+  .tile {
+    background-color: #d8b384;
+    border: 2px solid #5d3e1d;
+    height: 100px;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+  }
+  
+  .tile:hover {
+    background-color: #b88b61;
+    transform: scale(1.1);
+  }
+  
+  .video-container {
     position: absolute;
-    top: 15px;
-    left: 15px;
-    transition: all 0.1s;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    overflow: hidden;
+    border-radius: 10px;
   }
-
   
-  .transparent {
-    background-color: transparent;
+  #video-player {
+    width: 100%;
+    height: 100%;
+    display: none; /* Hidden by default */
+    border-radius: 10px;
   }
   
