@@ -6,35 +6,58 @@
   <title>Turkish Coffee Ritual</title>
   <link rel="stylesheet" href="style.css">
 </head>
+<header class="navbar">
+  <ul class="nav-list">
+    <li><a href="../index.html" class="nav-button">Home</a></li>  
+    <li><a href="../entry-1/index.html" class="nav-button">Intuition</a></li>  
+    <li><a href="../entry-2/index.html" class="nav-button">Perception</a></li>
+    <li><a href="../entry-3/index.html" class="nav-button">Sight</a></li>
+    <li><a href="../entry-4/index.html" class="nav-button">Memory</a></li>
+    <li><a href="../entry-5/index.html" class="nav-button">Smell</a></li>
+    <li><a href="../entry-6/index.html" class="nav-button">Taste</a></li>
+    <li><a href="../entry-7/index.html" class="nav-button">Connection</a></li>
+    <li><a href="index.html" class="nav-button">Ritual</a></li>
+    <li><a href="../entry-9/index.html" class="nav-button">Texture</a></li>
+    <li><a href="../entry-10/index.html" class="nav-button">Echo</a></li>
+  </ul> 
+</header>
 <body>
-  <header class="navbar">
-    <ul class="nav-list">
-      <li><a href="../index.html" class="nav-button">Home</a></li>  
-      <li><a href="../entry-1/index.html" class="nav-button">Intuition</a></li>  
-      <li><a href="../entry-2/index.html" class="nav-button">Perception</a></li>
-      <li><a href="../entry-3/index.html" class="nav-button">Sight</a></li>
-      <li><a href="../entry-4/index.html" class="nav-button">Memory</a></li>
-      <li><a href="../entry-5/index.html" class="nav-button">Smell</a></li>
-      <li><a href="../entry-6/index.html" class="nav-button">Taste</a></li>
-      <li><a href="../entry-7/index.html" class="nav-button">Connection</a></li>
-      <li><a href="index.html" class="nav-button">Ritual</a></li>
-      <li><a href="#" class="nav-button">Texture</a></li>
-      <li><a href="#" class="nav-button">Echo</a></li>
-    </ul> 
-  </header>
-  <div class="coffee-table">
+  <div class="coffee-table"> 
     <div class="backgammon-board">
-      <div class="tile" href="video-1.mp4"></div>
-      <div class="tile" href="video-2.mov"></div>
-      <div class="tile" href="video-3.mov"></div>
-      <div class="tile" href="video-4.mov"></div>
-      <div class="tile" href="video-5.mov"></div>
-      <div class="tile" href="video-6.mov"></div> 
+      <div class="tile" data-video="video1"></div>
+      <div class="tile" data-video="video2"></div>
+      <div class="tile" data-video="video3"></div>
+      <div class="tile" data-video="video4"></div>
+      <div class="tile" data-video="video5"></div>
+      <div class="tile" data-video="video6"></div>
     </div>
-  </div>
-  <div class="fullscreen-video-container">
-    <video id="fullscreen-video" muted loop></video>
-  </div>
-  <script src="script.js"></script>
-</body>
-</html>
+    
+    <div class="fullscreen-video-container">
+      <video id="video1" class="fullscreen-video" muted autoplay loop>
+        <source src="videos/video1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <video id="video2" class="fullscreen-video" muted autoplay loop>
+        <source src="videos/video2.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <video id="video3" class="fullscreen-video" muted autoplay loop>
+        <source src="videos/video3.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <video id="video4" class="fullscreen-video" muted autoplay loop>
+        <source src="videos/video4.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <video id="video5" class="fullscreen-video" muted autoplay loop>
+        <source src="videos/video5.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <video id="video6" class="fullscreen-video" muted autoplay loop>
+        <source src="videos/video6.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    
+    </div>
+    

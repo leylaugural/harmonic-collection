@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Yatra+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Gowun+Batang:wght@400;700&family=Unlock&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amita:wght@400;700&family=Yatra+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yatra+One&display=swap');
+@import url("https://use.typekit.net/ufd8kuu.css");
+@import url("https://use.typekit.net/slq2pxe.css");
+
 * {
     margin: 0;
     padding: 0;
@@ -9,7 +16,7 @@
     overflow: hidden;
   }
 
-  .navbar {
+  .navbar { 
     position: fixed;
     top: 25px;
     width: 100%;
@@ -60,15 +67,63 @@
     width: 100vw;
     height: 100vh;
     background: url('entry-7-bg.png') no-repeat center center/cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
   
   .eyes {
-    position: relative;
+    position: absolute; 
+    top: 30%;
+    left: 70%; 
     display: flex;
-    gap: 50px; 
+    gap: 50px;
+  }
+  
+  .eyes-2 {
+    position: absolute; 
+    top: 30%;
+    left: 20%; 
+    display: flex;
+    gap: 50px;
+  }
+  
+  .eyes-3 {
+    position: absolute; 
+    top: 70%; 
+    left: 60%;
+    display: flex;
+    gap: 50px;
+  }
+
+  .eyes-4 {
+    position: absolute; 
+    top: 90%; 
+    left: 30%;
+    display: flex;
+    gap: 50px;
+  }
+
+  .eyes-5 {
+    position: absolute; 
+    top: 50%; 
+    left: 45%;
+    display: flex;
+    gap: 50px;
+  }
+
+  .eyes-6 {
+    position: absolute; 
+    top: 70%; 
+    left: 5%;
+    display: flex;
+    gap: 50px;
+  }
+
+
+  .eyes-7 {
+    position: absolute; 
+    top: 50%; 
+    left: 80%;
+    display: flex;
+    gap: 50px;
   }
   
   .eye {
@@ -83,20 +138,16 @@
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
   }
   
-  .eye::before {
-    content: '';
+  .transparent {
+    background-color: transparent;
+  }
+  
+  .pupil {
     width: 20px;
     height: 20px;
     background-color: black;
     border-radius: 50%;
     position: absolute;
-    top: 15px;
-    left: 15px;
-    transition: all 0.1s;
-  }
-
-  
-  .transparent {
-    background-color: transparent;
+    transition: transform 0.1s linear;
   }
   

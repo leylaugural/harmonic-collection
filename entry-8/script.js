@@ -1,31 +1,33 @@
-let tiles = document.querySelectorAll('.tile');
-let fullscreenContainer = document.querySelector('.fullscreen-video-container');
-let fullscreenVideo = document.getElementById('fullscreen-video');
+// let tiles = document.querySelectorAll('.tile');
+// let fullscreenContainer = document.querySelector('.fullscreen-video-container');
+// let fullscreenVideo = document.getElementById('fullscreen-video');
 
-// List of video sources
-let videoSources = [
-  'video-1.mov',
-  'video-2.mov',
-  'videos/video3.mp4',
-  'videos/video4.mp4',
-  'videos/video5.mp4',
-  'videos/video6.mp4'
-];
+// let videoSources = [
+//   'videos/video1.mp4',
+//   'videos/video2.mp4',
+//   'videos/video3.mp4',
+//   'videos/video4.mp4',
+//   'videos/video5.mp4',
+//   'videos/video6.mp4'
+// ];
 
-// Add hover event to tiles
-tiles.forEach((tile, index) => {
-  tile.addEventListener('mouseenter', () => {
-    let videoSrc = videoSources[index]; // Map the tile index to the video source
-    if (videoSrc) {
-      fullscreenVideo.src = videoSrc; // Set the video source
-      fullscreenContainer.style.display = 'flex'; // Show the video container
-      fullscreenVideo.play(); // Play the video
-    }
-  });
+// tiles.forEach((tile, index) => {
+//   tile.addEventListener('mouseenter', () => {
+//     console.log(`Mouse entered tile ${index}`);
+//     let videoSrc = videoSources[index];
+//     if (videoSrc) {
+//       fullscreenVideo.src = videoSrc;
+//       fullscreenContainer.style.display = 'flex';
+//       fullscreenVideo.muted = true; // Ensure video is muted
+//       fullscreenVideo.play().catch((e) => console.error('Error playing video:', e));
+//     }
+//   });
 
-  tile.addEventListener('mouseleave', () => {
-    fullscreenVideo.pause(); // Pause the video
-    fullscreenVideo.src = ''; // Clear the video source
-    fullscreenContainer.style.display = 'none'; // Hide the video container
-  });
-});
+//   tile.addEventListener('mouseleave', () => {
+//     console.log(`Mouse left tile ${index}`);
+//     fullscreenVideo.pause();
+//     fullscreenVideo.src = '';
+//     fullscreenContainer.style.display = 'none';
+//   });
+// });
+

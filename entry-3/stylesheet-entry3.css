@@ -1,5 +1,9 @@
 @import url("https://use.typekit.net/ufd8kuu.css");
-
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Gowun+Batang:wght@400;700&family=Unlock&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amita:wght@400;700&family=Yatra+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yatra+One&display=swap');
+@import url("https://use.typekit.net/ufd8kuu.css");
+@import url("https://use.typekit.net/slq2pxe.css");
 * {
     margin: 0;
     padding: 0;
@@ -14,6 +18,7 @@ body {
     height: 100vh;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 }
 
 .navbar {
@@ -53,54 +58,65 @@ body {
     box-shadow: 0px 0px 30px rgba(255, 220, 190, 0.6);
   } 
   
-h1 {
+  h1 {
     font-size: 3rem;
-    color: #1333ba;
-    font-family: 'Yatra One', cursive;
+    color: #70102d;
+    font-family: "hwt-arabesque", sans-serif;
     text-align: center;
-    margin: 120px auto 20px auto;
+    margin: 80px auto 20px auto;
 }
 
-.content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-}
-
-.cups {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
+.cups-container {
+    position: relative;
     width: 100%;
-    margin: 20px 0;
+    height: 100%;
+    pointer-events: none;
 }
 
 .cup-item {
-    position: relative;
-    width: 200px;
+    position: absolute; /* Ensures each cup is positioned independently */
+    width: 150px; /* Set a base size */
     height: auto;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease; /* Smooth scale effect */
+    transform: rotate(calc(var(--rotation) * 1deg));
+    pointer-events: auto; /* Ensures hover events are detected */
+    z-index: 1; /* Ensures they are not hidden by other elements */
 }
 
 .cup-item img {
     width: 100%;
     height: auto;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease; /* Ensures images scale smoothly */
 }
 
 .cup-item:hover {
-    transform: scale(1.2);
+    transform: scale(2) rotate(calc(var(--rotation) * 1deg)); /* Scale and keep rotation */
+    z-index: 2; /* Bring to the foreground when hovered */
+}
+
+/* Randomized positioning for scattered cups */
+.cup-item:nth-child(1) { top: 10%; left: 10%; --rotation: 10; }
+.cup-item:nth-child(2) { top: 30%; left: 40%; --rotation: -15; }
+.cup-item:nth-child(3) { top: 50%; left: 70%; --rotation: 20; }
+.cup-item:nth-child(4) { top: 70%; left: 20%; --rotation: -10; }
+.cup-item:nth-child(5) { top: 65%; left: 50%; --rotation: 15; }
+.cup-item:nth-child(6) { top: 15%; left: 75%; --rotation: -20; }
+
+.motifs-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    /* Removed pointer-events: none; to ensure hover events are detected */
 }
 
 .motifs {
-    width: 200px;
-    height: 200px;
-    opacity: 0.3;
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    opacity: 0.3; /* Default opacity */
     transition: opacity 0.5s ease, transform 0.3s ease;
+    transform: rotate(calc(var(--rotation) * 1deg));
+    pointer-events: auto; /* Ensure hover events are triggered */
 }
 
 .motifs img {
@@ -112,3 +128,17 @@ h1 {
 .motifs:hover {
     opacity: 1;
 }
+
+
+/* Randomized positioning for scattered motifs */
+.motifs:nth-child(1) { top: 35%; left: 5%; --rotation: 15; }
+.motifs:nth-child(2) { top: 25%; left: 45%; --rotation: -10; }
+.motifs:nth-child(3) { top: 5%; left: 55%; --rotation: 25; }
+.motifs:nth-child(4) { top: 15%; left: 15%; --rotation: -20; }
+.motifs:nth-child(5) { top: 10%; left: 30%; --rotation: 30; }
+.motifs:nth-child(6) { top: 45%; left: 20%; --rotation: -15; }
+.motifs:nth-child(7) { top: 15%; left: 75%; --rotation: 25; }
+.motifs:nth-child(8) { top: 65%; left: 85%; --rotation: -20; }
+.motifs:nth-child(9) { top: 10%; left: 90%; --rotation: 30; }
+.motifs:nth-child(10) { top: 75%; left: 10%; --rotation: -15; }
+.motifs:nth-child(11) { top: 75%; left: 30%; --rotation: -15; }
