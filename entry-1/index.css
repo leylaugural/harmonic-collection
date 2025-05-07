@@ -3,6 +3,7 @@
 @import url("https://use.typekit.net/gqn6jle.css");
 @import url("https://use.typekit.net/pfh6bqf.css");
 @import url("https://use.typekit.net/slq2pxe.css");
+
 body {
   margin: 0;
   padding: 0;
@@ -16,50 +17,38 @@ body {
   transition: background-color 0.5s ease;
 }
 
-.navbar {
+body.dark-mode {
+  background-color: #000;
+}
+
+.nav-header {
   position: fixed;
-  top: 25px;
+  top: 20px;
   width: 100%;
-  padding: 10px 0;
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
   z-index: 10;
 }
-
-.nav-list {
-  list-style-type: none;
-  padding: 0;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 15px;
-}
- 
-.nav-button {
-  position: relative;
-  color: #ead4ad;
-  border: 2px solid rgba(255, 215, 175, 0.5);
-  font-size: 10px;
-  cursor: pointer;
-  font-family: "hwt-arabesque", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  transition: background-color 0.5s, transform 0.3s, box-shadow 0.5s;
-  border-radius: 50px;
-  padding: 15px 30px;
+.arrow {
+  font-size: 24px;
   text-decoration: none;
+  color: #ead4ad;
+  padding: 5px 12px;
 }
 
-.nav-button:hover {
-  background: linear-gradient(135deg, rgba(148, 1, 1, 0.8), rgba(76, 22, 9, 0.9));
-  transform: scale(1.05) rotate(-1deg);
-  box-shadow: 0px 0px 30px rgba(255, 220, 190, 0.6);
+.arrow-left {
+  position: absolute;
+  left: 20px; /* spaced right of home icon */
+  top: 20px;
 }
 
-.nav-button:active {
-  transform: scale(0.98) rotate(0deg);
+.arrow-right {
+  position: absolute;
+  right: 20px;
+  top: 20px;
 }
-
 .container { 
   display: flex;
   justify-content: center;
@@ -68,16 +57,40 @@ body {
 }
 
 .center-image {
+  position: relative;
   width: 700px;
   height: 700px;
-  background-image: url('coffee-grounds-before.png');
-  background-size: cover;
-  background-position: center;
-  transition: background-image 0.5s ease; 
+  cursor: pointer;
 }
 
-.container:hover .center-image {
+.image-before,
+.image-after {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: opacity 0.5s ease;
+}
+
+.image-before {
+  background-image: url('coffee-grounds-before.png');
+  opacity: 1;
+  z-index: 1;
+}
+
+.image-after {
   background-image: url('coffee-grounds-after.png');
+  opacity: 0;
+  z-index: 2;
+}
+
+.center-image.clicked .image-before {
+  opacity: 0;
+}
+
+.center-image.clicked .image-after {
+  opacity: 1;
 }
 
 
@@ -97,10 +110,10 @@ body {
   top: 30%;
   right: 15%;
 }
+
 .symbol2 img{
     height: 170px;
     width:auto;
-    opacity: 0;
     transition: opacity 0.5s ease;
 }
 
@@ -112,7 +125,6 @@ body {
 .symbol3 img{
     height: 170px;
     width: auto;
-    opacity: 0;
     transition: opacity 0.5s ease;
 }
 
@@ -122,19 +134,9 @@ body {
   font-size: medium;
   color: black;
 }
-
-
-.ring {
-    bottom: 40%;
-    right:15%;
+.symbol2,
+.symbol3 {
+  opacity: 0;
+  pointer-events: none;
 }
 
-.container:hover ~ .symbol2 img {
-    opacity: 1; }
-
-.container:hover ~ .symbol3 img {
-  opacity: 1; }
-
-body:hover {
-  background-color: rgb(0, 0, 0);
-} 

@@ -1,11 +1,13 @@
 const centerImage = document.querySelector('.center-image');
 const body = document.body;
+const ring = document.querySelector('.symbol2');
+const coin = document.querySelector('.symbol3');
 
-// Add hover event listeners
-centerImage.addEventListener('mouseenter', () => {
-  body.style.backgroundColor = 'rgb(0, 0, 0)'; // Change background to black
-});
+centerImage.addEventListener('click', () => {
+  body.classList.toggle('dark-mode');
+  centerImage.classList.toggle('clicked');
 
-centerImage.addEventListener('mouseleave', () => {
-  body.style.backgroundColor = '#f0f8ff'; // Revert to original background color
+  const isDark = body.classList.contains('dark-mode');
+  ring.style.opacity = isDark ? '1' : '0';
+  coin.style.opacity = isDark ? '1' : '0';
 });

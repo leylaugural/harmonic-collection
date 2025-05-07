@@ -1,40 +1,33 @@
-.navbar {
-    position: fixed;
-    top: 25px;
-    width: 100%;
-    padding: 10px 0;
-    text-align: center;
-    z-index: 10;
-  }
-  
-  .nav-list {
-    list-style-type: none;
-    padding: 0;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 15px;
-  }
-  
-  .nav-button {
-    color: rgba(76, 22, 9, 0.9);
-    border: 2px solid rgba(76, 22, 9, 0.9);
-    font-size: 10px;
-    cursor: pointer;
-    font-family: "hwt-arabesque", sans-serif;
-    transition: background-color 0.5s, transform 0.3s, box-shadow 0.5s;
-    border-radius: 50px;
-    padding: 15px 30px;
-    text-decoration: none;
-  }
-  
-  .nav-button:hover {
-    background: linear-gradient(135deg, rgba(148, 1, 1, 0.8), rgba(76, 22, 9, 0.9));
-    transform: scale(1.05) rotate(-1deg);
-    color: #ead4ad;
-    box-shadow: 0px 0px 30px rgba(255, 220, 190, 0.6);
-  } 
+.nav-header {
+  position: fixed;
+  top: 20px;
+  left: 0;
+  right: -50;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0px;
+  z-index: 10;
+}
+.arrow {
+  font-size: 24px;
+  text-decoration: none;
+  color: #ead4ad;
+  padding: 5px 10px;
+}
+
+.arrow-left {
+  position: absolute;
+  left: 10px;
+  top: 20px;
+}
+
+.arrow-right {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
   body {
     margin: 0;
     overflow: hidden;

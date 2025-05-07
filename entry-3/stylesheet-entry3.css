@@ -21,42 +21,34 @@ body {
     overflow: hidden;
 }
 
-.navbar {
+.nav-header {
     position: fixed;
-    top: 25px;
+    top: 20px;
     width: 100%;
-    padding: 10px 0;
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
     z-index: 10;
   }
-  
-  .nav-list {
-    list-style-type: none;
-    padding: 0;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 15px;
-  }
-  
-  .nav-button {
-    color: #ead4ad;
-    border: 2px solid rgba(255, 215, 175, 0.5);
-    font-size: 10px;
-    cursor: pointer;
-    font-family: "hwt-arabesque", sans-serif;
-    transition: background-color 0.5s, transform 0.3s, box-shadow 0.5s;
-    border-radius: 50px;
-    padding: 15px 30px;
+  .arrow {
+    font-size: 24px;
     text-decoration: none;
+    color: #70102d;
+    padding: 5px 12px;
   }
   
-  .nav-button:hover {
-    background: linear-gradient(135deg, rgba(148, 1, 1, 0.8), rgba(76, 22, 9, 0.9));
-    transform: scale(1.05) rotate(-1deg);
-    box-shadow: 0px 0px 30px rgba(255, 220, 190, 0.6);
-  } 
+  .arrow-left {
+    position: absolute;
+    left: 10px;
+    top: 20px;
+  }
+  
+  .arrow-right {
+    position: absolute;
+    right: 50px;
+    top: 20px;
+  }
   
   h1 {
     font-size: 3rem;
@@ -106,17 +98,17 @@ body {
     position: relative;
     width: 100%;
     height: 100%;
-    /* Removed pointer-events: none; to ensure hover events are detected */
+
 }
 
 .motifs {
     position: absolute;
     width: 150px;
     height: 150px;
-    opacity: 0.3; /* Default opacity */
+    opacity: 0.3; 
     transition: opacity 0.5s ease, transform 0.3s ease;
     transform: rotate(calc(var(--rotation) * 1deg));
-    pointer-events: auto; /* Ensure hover events are triggered */
+    pointer-events: auto; 
 }
 
 .motifs img {
@@ -130,9 +122,9 @@ body {
 }
 
 
-/* Randomized positioning for scattered motifs */
+
 .motifs:nth-child(1) { top: 35%; left: 5%; --rotation: 15; }
-.motifs:nth-child(2) { top: 25%; left: 45%; --rotation: -10; }
+.motifs:nth-child(2) { top: 35%; left: 45%; --rotation: -10; }
 .motifs:nth-child(3) { top: 5%; left: 55%; --rotation: 25; }
 .motifs:nth-child(4) { top: 15%; left: 15%; --rotation: -20; }
 .motifs:nth-child(5) { top: 10%; left: 30%; --rotation: 30; }
