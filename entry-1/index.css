@@ -128,6 +128,12 @@ body.dark-mode {
     transition: opacity 0.5s ease;
 }
 
+.symbol2 img,
+.symbol3 img {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+}
 .symbol4 {
   bottom: 10%;
   right: 7%;
@@ -136,7 +142,7 @@ body.dark-mode {
 }
 .symbol2,
 .symbol3 {
-  opacity: 0;
-  pointer-events: none;
+  position: absolute;
+  z-index: 5;
 }
 
